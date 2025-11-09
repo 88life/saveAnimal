@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">saveAnimal_register2</string>
+    <string name="title_activity_login">로그인</string>
+    <string name="register"> 회원가입 </string>
+    <string name="role"> 역할을 선택해주세요. </string>
+    <string name="animalShelter"> 보호소 </string>
+    <string name="users"> 일반사용자 </string>
+    <string name="next"> 다음 </string>
+    <string name="id"> 아이디 </string>
+    <string name="password"> 비밀번호 </string>
+    <string name="login"> 로그인 </string>
+    <string name="notregister"> 회원이 아니신가요? 회원가입으로 이동하기</string>
+    <string name="profile"> 프로필 </string>
+</resources>
