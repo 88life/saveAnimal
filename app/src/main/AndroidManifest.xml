@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SaveAnimal">
-        <activity
-            android:name=".save_memberEdit"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".save_memberEdit"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".saveMainActivity"
             android:exported="true"
