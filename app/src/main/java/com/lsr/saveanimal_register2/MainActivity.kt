@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
             when(selectedButtonId) {
                 R.id.button_animalShelter -> {
-                    val intent = Intent(this, ShelterRegisterActivit::class.java)
+                    val intent = Intent(this, SheleterProfileActivity::class.java)
                     startActivity(intent)
                 }
 

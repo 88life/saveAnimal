@@ -23,23 +23,23 @@ class SheleterProfileActivity : AppCompatActivity() {
 
         // 3. 툴바 설정 (햄버거 메뉴 아이콘 클릭 리스너)
         toolbar.setNavigationOnClickListener {
-            // TODO: 햄버거 메뉴 클릭 시 동작 (예: Navigation Drawer 열기)
+
             Toast.makeText(this, "메뉴 클릭됨", Toast.LENGTH_SHORT).show()
         }
 
         // 4. 버튼 클릭 리스너 설정
         btnEditProfile.setOnClickListener {
-            // TODO: 회원정보 수정 화면으로 이동
+
             Toast.makeText(this, "회원정보 수정", Toast.LENGTH_SHORT).show()
         }
 
         btnSettings.setOnClickListener {
-            // TODO: 설정 화면으로 이동
+
             Toast.makeText(this, "설정", Toast.LENGTH_SHORT).show()
         }
 
         btnLogout.setOnClickListener {
-            // TODO: 로그아웃 처리 및 맨처음 화면(예: LoginActivity)으로 이동
+
             Toast.makeText(this, "로그아웃", Toast.LENGTH_SHORT).show()
 
             // 예시: MainActivity로 이동하고 현재 화면(ProfileActivity)을 종료
@@ -50,7 +50,7 @@ class SheleterProfileActivity : AppCompatActivity() {
         }
 
         btnWithdraw.setOnClickListener {
-            // TODO: 회원 탈퇴 처리
+
             Toast.makeText(this, "회원 탈퇴", Toast.LENGTH_SHORT).show()
         }
     }

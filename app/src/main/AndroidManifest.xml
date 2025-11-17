@@ -12,13 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaveAnimal_register2">
         <activity
-            android:name=".SheleterProfile"
+            android:name=".SheleterProfileActivity"
             android:exported="false" />
+
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.login.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login" />
         <activity
@@ -26,9 +24,6 @@
             android:exported="false" />
         <activity
             android:name=".UserRegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ShelterRegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
