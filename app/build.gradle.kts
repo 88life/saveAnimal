@@ -7,6 +7,9 @@ android {
     namespace = "com.ism.saveanimal"
     compileSdk = 36
 
+    buildFeatures {
+        viewBinding=true
+    }
     defaultConfig {
         applicationId = "com.ism.saveanimal"
         minSdk = 26
@@ -48,6 +51,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

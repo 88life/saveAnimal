@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- 원 배경색 (원 안 색) -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- 테두리 -->
+    <stroke
+        android:width="2dp"
+        android:color="#333333" />
+</shape>

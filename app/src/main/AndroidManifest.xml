@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaveAnimal">
         <activity
-            android:name=".MainActivity"
+            android:name=".save_memberEdit"
+            android:exported="false" />
+        <activity
+            android:name=".saveMainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SaveAnimal.NoActionBar">
