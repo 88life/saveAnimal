@@ -1,5 +1,6 @@
 package com.ism.saveanimal
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -11,7 +12,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ism.saveanimal.databinding.SaveMenuFullBinding
+
 
 class saveMainActivity : AppCompatActivity() {
 
@@ -24,7 +27,14 @@ class saveMainActivity : AppCompatActivity() {
         binding = SaveMenuFullBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         setSupportActionBar(binding.appBarMain.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        binding.appBarMain.toolbar.navigationIcon?.setTint(Color.parseColor("#515ca0"))
+
+
+
 
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -43,13 +53,10 @@ class saveMainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)

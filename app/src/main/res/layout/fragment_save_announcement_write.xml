@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".save_announcement_write">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="416dp"
+            android:layout_height="58dp"
+            android:background="#cedcfc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:text="공고 작성"
+            android:textSize="25dp"
+            android:textColor="#465ba5"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.838"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view3"
+            app:layout_constraintVertical_bias="0.488" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="349dp"
+            android:layout_height="207dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/gen_btn1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="정보입력"
+            android:textColor="#465ba5"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="413dp"
+            android:layout_height="306dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <LinearLayout
+                android:layout_width="194dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="이름"
+                    android:textColor="#465ba5"
+                    android:textSize="16dp"
+                    android:padding="8dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="나이"
+                    android:textSize="16dp"
+                    android:padding="8dp"
+                    android:textColor="#465ba5" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="성별"
+                    android:padding="8dp"
+                    android:textSize="16dp"
+                    android:textColor="#465ba5" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="종"
+                    android:padding="8dp"
+                    android:textSize="16dp"
+                    android:textColor="#465ba5" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="성격"
+                    android:padding="8dp"
+                    android:textSize="16dp"
+                    android:textColor="#465ba5" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="겁먹어하는 것"
+                    android:padding="8dp"
+                    android:textSize="16dp"
+                    android:textColor="#465ba5" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="질병"
+                    android:padding="8dp"
+                    android:textSize="16dp"
+                    android:textColor="#465ba5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/editTextText7"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/input_box"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    android:textSize="15dp"
+                    android:layout_marginTop="2dp"/>
+
+                <EditText
+                    android:id="@+id/editTextText8"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/input_box"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    android:textSize="15dp"
+                    android:layout_marginTop="2dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton3"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/input_box"
+                            android:padding="8dp"
+                            android:text="여"
+                            android:textSize="12dp" />
+                    </RadioGroup>
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/input_box"
+                        android:padding="8dp"
+                        android:text="남"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

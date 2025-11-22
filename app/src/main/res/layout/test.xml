@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 1. 프로필 카드 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- 프로필 동그라미 -->
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_save_profile_circle"
+                    android:scaleType="centerInside"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- “프로필 사진” 글자 대신 가운데 들어갈 텍스트 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="프로\n필사"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="#515CA0"
+                    app:layout_constraintTop_toTopOf="@id/img_profile"
+                    app:layout_constraintBottom_toBottomOf="@id/img_profile"
+                    app:layout_constraintStart_toStartOf="@id/img_profile"
+                    app:layout_constraintEnd_toEndOf="@id/img_profile" />
+
+                <!-- 오른쪽 텍스트 -->
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="OO보호소 담당자님,\n어서오세요."
+                    android:textStyle="bold"
+                    android:textColor="#28408A"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/img_profile"
+                    app:layout_constraintTop_toTopOf="@id/img_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:layout_marginStart="12dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 2. 안내 텍스트 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="작성한 공고 (게시글 꼭 눌러서 수정)"
+            android:textAlignment="center"
+            android:textColor="#515CA0"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 3. 동물 카드 1개 예시 (나중에 RecyclerView로 반복 추천) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <!-- 왼쪽 동물 사진 영역 -->
+                <ImageView
+                    android:id="@+id/img_animal"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/bg_save_animal_photo"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintWidth_percent="0.35" />
+
+                <!-- 가운데 텍스트들 -->
+                <LinearLayout
+                    android:id="@+id/animal_info_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintTop_toTopOf="@id/img_animal"
+                    app:layout_constraintBottom_toBottomOf="@id/img_animal"
+                    app:layout_constraintStart_toEndOf="@id/img_animal"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_write"
+                    app:layout_constraintHorizontal_bias="0"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이름"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나이"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="성별"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="종"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="성격"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="무서워하는거"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="질병"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- 오른쪽 아래 공고 작성 버튼 -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_write"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="공고\n작성"
+                    android:textSize="13sp"
+                    android:textColor="#515CA0"
+                    android:backgroundTint="#CEDCFC"
+                    app:cornerRadius="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 동물 카드 더 만들고 싶다면 위 카드 블럭을 복붙해서 여러 개 두면 됨 -->
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

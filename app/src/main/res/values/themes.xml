@@ -22,4 +22,13 @@
     <style name="Theme.SaveAnimal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.SaveAnimal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+<!-- 기존 Theme.SaveAnimal 들은 그대로 두고, 이거만 추가 -->
+<style name="SaveAnimal.MyOutlineButton" parent="@android:style/Widget.Button">
+    <!-- 내가 만든 배경 사용 -->
+    <item name="android:background">@drawable/save_btn1</item>
+    <!-- 버튼 글자 색 -->
+    <item name="android:textColor">@color/black</item>
+</style>
+
 </resources>
