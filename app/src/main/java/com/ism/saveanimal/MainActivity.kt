@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    // 2. 리사이클러뷰 설정
+    // 리사이클러뷰 설정
     private fun setupRecyclerView() {
         adapter = AnimalAdapter(emptyList())
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
