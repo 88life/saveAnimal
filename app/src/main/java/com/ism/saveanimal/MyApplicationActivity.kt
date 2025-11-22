@@ -6,22 +6,21 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ism.saveanimal.databinding.ActivityMyPickBinding // [주의] 바인딩 이름 확인
+import com.ism.saveanimal.databinding.ActivityMyApplicationBinding
 
-class MyPickActivity : AppCompatActivity() {
+class MyApplicationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMyPickBinding // [주의] 바인딩 타입 변경
+    private lateinit var binding: ActivityMyApplicationBinding
     private lateinit var adapter: AnimalAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // [주의] 바인딩 inflate 변경
-        binding = ActivityMyPickBinding.inflate(layoutInflater)
+        binding = ActivityMyApplicationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupToolbarAndDrawer()
         setupRecyclerView()
-        loadDummyData() // 나중엔 '찜한 목록'만 불러오는 함수로 바꾸면 됨
+        loadDummyData()
     }
 
     private fun setupToolbarAndDrawer() {
@@ -55,10 +54,10 @@ class MyPickActivity : AppCompatActivity() {
     }
 
     private fun loadDummyData() {
-        // 일단 가짜 데이터 (나중엔 DB에서 내가 찜한 것만 가져오기)
+        // 테스트용 데이터 (화면이 바뀐 걸 확인하기 위해 이름만 살짝 바꿔보세요)
         val dummyList = listOf(
-            Post("1", "찜한 강아지", 3, "수컷", ""),
-            Post("2", "찜한 고양이", 2, "암컷", "")
+            Post("10", "신청한 멍멍이", 3, "수컷", ""),
+            Post("11", "신청한 야옹이", 2, "암컷", "")
         )
         adapter.updateData(dummyList)
     }
