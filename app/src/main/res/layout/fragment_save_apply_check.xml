@@ -30,7 +30,7 @@
             android:layout_width="315dp"
             android:layout_height="237dp"
             android:layout_marginTop="16dp"
-            tools:listitem="@layout/gen_repeat_horizen_recycler"
+            tools:listitem="@layout/save_apply_check_recycler_p"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -50,7 +50,7 @@
             android:id="@+id/recyclerView5"
             android:layout_width="315dp"
             android:layout_height="237dp"
-            tools:listitem="@layout/gen_repeat_horizen_recycler"
+            tools:listitem="@layout/save_apply_check_recycler_p1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

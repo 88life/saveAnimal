@@ -14,8 +14,9 @@
         <!--        <activity-->
 <!--            android:name=".save_memberEdit"-->
 <!--            android:exported="false" />-->
+
         <activity
-            android:name=".saveMainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SaveAnimal.NoActionBar">
@@ -26,6 +27,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SaveMainActivity" />
+        <activity android:name=".GenMainActivity" />
+        <activity android:name=".SaveMemberInformEditActivity" />
+        <activity android:name=".GenNoticeBoard" />
+        <activity android:name=".SaveAnnouncementWrite"/>
+        <activity android:name=".GenMemberInformEdit"/>
+        <activity android:name=".SheleterProfileActivity"
+            android:theme="@style/Theme.SaveAnimal.NoActionBar"/>
+
+
     </application>
 
 </manifest>

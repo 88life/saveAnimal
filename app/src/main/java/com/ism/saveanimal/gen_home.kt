@@ -13,11 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [gen_home.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class gen_home : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -35,7 +31,7 @@ class gen_home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_gen_home, container, false)
+        val view = inflater.inflate(R.layout.gen_board, container, false)
 
         // 1. 추천공고 리사이클러 (가로)
         val recyclerRecommend = view.findViewById<RecyclerView>(R.id.recyclerView)

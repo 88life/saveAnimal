@@ -2,24 +2,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
+    android:id="@+id/genmobile_navigation"
     app:startDestination="@+id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.ism.saveanimal.ui.home.HomeFragment"
         android:label="홈"
-        tools:layout="@layout/fragment_save_home" />
+        tools:layout="@layout/fragment_gen_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/apply_check"
         android:name="com.ism.saveanimal.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:label="apply_check"
+        tools:layout="@layout/gen_board" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.ism.saveanimal.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/profile"
+        android:name="com.ism.saveanimal.ui.slideshow.SlideshowFragment1"
+        android:label="profile"
+        tools:layout="@layout/activity_profile" />
 </navigation>

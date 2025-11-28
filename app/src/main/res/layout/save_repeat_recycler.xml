@@ -77,40 +77,40 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/itemName"
+                android:id="@+id/itName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="" />
 
             <TextView
-                android:id="@+id/itemAge"
+                android:id="@+id/itAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="" />
 
             <TextView
-                android:id="@+id/itemGender"
+                android:id="@+id/itGender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="" />
 
             <TextView
-                android:id="@+id/itemSpecies"
+                android:id="@+id/itSpecies"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="" />
 
             <TextView
-                android:id="@+id/itemScared"
+                android:id="@+id/itScared"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="" />
 
             <TextView
-                android:id="@+id/itemDisease"
+                android:id="@+id/itDisease"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="" />
         </LinearLayout>
     </LinearLayout>
 

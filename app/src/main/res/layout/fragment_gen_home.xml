@@ -89,7 +89,8 @@
             android:layout_height="wrap_content"
             android:text="추천공고"
             android:textSize="18dp"
-            android:layout_marginLeft="18dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -100,11 +101,7 @@
             tools:listitem="@layout/gen_repeat_horizen_recycler"
             >
 
-            <LinearLayout
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" />
         </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
@@ -112,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="최근에 본 유기동물"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:layout_marginLeft="18dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -123,11 +120,7 @@
             android:layout_marginRight="20dp"
             tools:listitem="@layout/gen_repeat_verti_recycler">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                />
+
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>

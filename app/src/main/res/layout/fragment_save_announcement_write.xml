@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".save_announcement_write">
+    tools:context=".SaveAnnouncementWrite">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -200,7 +200,37 @@
                         android:padding="8dp"
                         android:text="남"
                         android:textSize="12dp" />
+
                 </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/input_box"
+                    android:layout_marginTop="2dp"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/input_box"
+                    android:layout_marginTop="2dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/input_box"
+                    android:layout_marginTop="2dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/input_box"
+                    android:layout_marginTop="2dp"/>
             </LinearLayout>
         </LinearLayout>
 

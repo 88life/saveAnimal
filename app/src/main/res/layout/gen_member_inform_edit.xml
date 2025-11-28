@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".save_member_inform_edit">
+    tools:context=".GenMemberInformEdit">
 
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/textView7"
@@ -136,7 +133,7 @@
             android:layout_marginTop="12dp"
             android:ems="10"
             android:inputType="text"
-            android:hint="보호소 기관명"
+            android:hint="이름"
             android:textSize="15dp"
             android:paddingLeft="10dp"
             android:background="@drawable/input_box"
@@ -194,4 +191,3 @@
             app:layout_constraintVertical_bias="0.019" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>

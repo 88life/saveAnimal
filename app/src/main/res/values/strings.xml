@@ -18,5 +18,48 @@
         <item>인천</item>
         <item>부산</item>
     </string-array>
-
+    <string-array name="species">
+        <item>말티즈</item>
+        <item>비숑</item>
+        <item>진돗개</item>
+        <item>푸들</item>
+        <item>보더콜리</item>
+        <item>시츄</item>
+        <item>시바</item>
+    </string-array>
+    <string-array name="personal">
+        <item>활발</item>
+        <item>내성적</item>
+        <item>겁이 많음</item>
+        <item>사나움</item>
+        <item>경계가 심함</item>
+        <item>온순함</item>
+    </string-array>
+    <string-array name="scared">
+        <item>주사기</item>
+        <item>손</item>
+        <item>사람</item>
+        <item>새</item>
+        <item>소음</item>
+        <item>개</item>
+    </string-array>
+    <string-array name="disease">
+        <item>슬개골탈골</item>
+        <item>아토피</item>
+        <item>피부병</item>
+        <item>호흡기 질환</item>
+        <item>알레르기</item>
+        <item>심장 질환</item>
+    </string-array>
+    <string name="title_activity_login">로그인</string>
+    <string name="register"> 회원가입 </string>
+    <string name="role"> 역할을 선택해주세요. </string>
+    <string name="animalShelter"> 보호소 </string>
+    <string name="users"> 일반사용자 </string>
+    <string name="next"> 다음 </string>
+    <string name="id"> 아이디 </string>
+    <string name="password"> 비밀번호 </string>
+    <string name="login"> 로그인 </string>
+    <string name="notregister"> 회원이 아니신가요? 회원가입으로 이동하기</string>
+    <string name="profile"> 프로필 </string>
 </resources>

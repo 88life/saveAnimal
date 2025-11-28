@@ -53,7 +53,17 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.material3.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+
+    //  Firebase BoM (버전 관리 플랫폼) 추가
+    implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
+    //  Firestore 라이브러리 (버전 번호 없이 작성)
+    implementation("com.google.firebase:firebase-firestore")
+    // Glide (이미지 로더) - 기존 유지
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }
