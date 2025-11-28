@@ -21,5 +21,5 @@
         android:id="@+id/profile"
         android:name="com.ism.saveanimal.ui.slideshow.SlideshowFragment"
         android:label="profile"
-        tools:layout="@layout/activity_sheleter_profile" />
+        tools:layout="@layout/fragment_sheleter_profile" />
 </navigation>

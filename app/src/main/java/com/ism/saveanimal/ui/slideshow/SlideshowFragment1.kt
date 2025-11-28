@@ -13,21 +13,23 @@ import com.ism.saveanimal.AnimalAdapter
 import com.ism.saveanimal.AnimalItem
 import com.ism.saveanimal.GenMemberInformEdit
 import com.ism.saveanimal.R
-import com.ism.saveanimal.databinding.ActivityProfileBinding
-import com.ism.saveanimal.databinding.ActivitySheleterProfileBinding
+import com.ism.saveanimal.databinding.FragmentActivityProfileBinding
 import com.ism.saveanimal.databinding.FragmentSlideshowBinding
 
 
-class SlideshowFragment : Fragment() {
+class SlideshowFragment1 : Fragment() {
 
-        private var _binding: ActivityProfileBinding? = null
+        private var _binding: FragmentActivityProfileBinding? = null
         private val binding get() = _binding!!
 
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View {
-            _binding = ActivityProfileBinding.inflate(inflater, container, false)
+            val slideshowViewModel =
+                ViewModelProvider(this).get(SlideshowViewModel1::class.java)
+
+            _binding = FragmentActivityProfileBinding.inflate(inflater, container, false)
             return binding.root
         }
 

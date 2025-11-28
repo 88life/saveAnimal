@@ -5,15 +5,15 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ism.saveanimal.databinding.ActivityProfileBinding
+import com.ism.saveanimal.databinding.FragmentActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityProfileBinding
+    private lateinit var binding: FragmentActivityProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProfileBinding.inflate(layoutInflater)
+        binding = FragmentActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // 1. 더미 데이터 생성 (테스트용)

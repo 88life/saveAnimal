@@ -17,7 +17,7 @@ class SheleterProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // 1. XML 레이아웃을 화면에 설정
-        setContentView(R.layout.activity_sheleter_profile)
+        setContentView(R.layout.fragment_sheleter_profile)
 
         // 2. XML의 View들을 ID로 찾기
         val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
