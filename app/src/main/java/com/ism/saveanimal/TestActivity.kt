@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     resultKey.append(userAnswers[i] ?: "X")
                 }
 
-                val intent = Intent(this, ResultActivity::class.java)
+                val intent = Intent(this, TestResultActivity::class.java)
                 intent.putExtra("RESULT_KEY", resultKey.toString())
                 startActivity(intent)
             }
