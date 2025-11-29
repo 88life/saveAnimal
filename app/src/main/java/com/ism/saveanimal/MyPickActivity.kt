@@ -1,27 +1,26 @@
 package com.ism.saveanimal
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ism.saveanimal.databinding.ActivityMyPickBinding // [주의] 바인딩 이름 확인
+import com.ism.saveanimal.databinding.ActivityMyPickBinding
 
 class MyPickActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMyPickBinding // [주의] 바인딩 타입 변경
+    private lateinit var binding: ActivityMyPickBinding
     private lateinit var adapter: AnimalAdapter1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // [주의] 바인딩 inflate 변경
         binding = ActivityMyPickBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupToolbarAndDrawer()
         setupRecyclerView()
-        loadDummyData() // 나중엔 '찜한 목록'만 불러오는 함수로 바꾸면 됨
+        loadDummyData() // 함수 호출
     }
 
     private fun setupToolbarAndDrawer() {
@@ -49,13 +48,36 @@ class MyPickActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        adapter = AnimalAdapter1(emptyList())
+
+        adapter = AnimalAdapter1(
+            emptyList(),
+            onItemClick = { item ->
+
+                val intent = Intent(this, PostDetailCustomActivity::class.java)
+                intent.putExtra("postId", item.documentId)
+                intent.putExtra("name", item.aName)
+                intent.putExtra("age", item.aAge)
+                intent.putExtra("gender", item.aGender)
+                intent.putExtra("image", item.mainImageUrl)
+                intent.putExtra("breed", item.aBreed)
+                intent.putExtra("personality", item.aPersonality)
+                intent.putExtra("fears", item.aFears)
+                intent.putExtra("diseases", item.aDiseases)
+                intent.putExtra("shelter", item.aShelter)
+
+                startActivity(intent)
+            },
+            onButtonClick = { item ->
+                val intent = Intent(this, PostDetailCustomActivity::class.java)
+                intent.putExtra("postId", item.documentId)
+                startActivity(intent)
+            }
+        )
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
     }
 
     private fun loadDummyData() {
-        // 일단 가짜 데이터 (나중엔 DB에서 내가 찜한 것만 가져오기)
         val dummyList = listOf(
             Post("1", "찜한 강아지", 3, "수컷", ""),
             Post("2", "찜한 고양이", 2, "암컷", "")

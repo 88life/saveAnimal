@@ -1,5 +1,6 @@
 package com.ism.saveanimal
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -18,9 +19,9 @@ class MyApplicationActivity : AppCompatActivity() {
         binding = ActivityMyApplicationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupToolbarAndDrawer()
         setupRecyclerView()
         loadDummyData()
+
     }
 
     private fun setupToolbarAndDrawer() {
@@ -48,7 +49,31 @@ class MyApplicationActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        adapter = AnimalAdapter1(emptyList())
+        adapter = AnimalAdapter1(emptyList(), onItemClick = { item ->
+            // ← 여기서 클릭된 아이템의 정보를 받음
+
+            val intent = Intent(this, PostDetailCustomActivity::class.java)
+            intent.putExtra("postId", item.documentId)      // 필요한 데이터 전달
+            intent.putExtra("name", item.aName)
+            intent.putExtra("age", item.aAge)
+            intent.putExtra("gender", item.aGender)
+            intent.putExtra("image", item.mainImageUrl) // 이미지가 있다면
+            intent.putExtra("breed", item.aBreed)
+            intent.putExtra("personality", item.aPersonality)
+            intent.putExtra("fears", item.aFears)
+            intent.putExtra("diseases", item.aDiseases)
+            intent.putExtra("shelter", item.aShelter)
+
+            startActivity(intent)
+        },
+            onButtonClick = {item ->
+            val intent = Intent(this, PostDetailCustomActivity::class.java)
+                intent.putExtra("postId", item.documentId)
+                startActivity(intent)
+        }
+        )
+
+
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
     }
@@ -61,4 +86,5 @@ class MyApplicationActivity : AppCompatActivity() {
         )
         adapter.updateData(dummyList)
     }
+
 }

@@ -81,7 +81,10 @@
             android:textSize="12sp"
             android:paddingHorizontal="16dp"
             app:layout_constraintBottom_toBottomOf="@+id/imgContainer"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:clickable="true"
+            android:focusable="true"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

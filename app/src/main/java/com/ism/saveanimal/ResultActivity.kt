@@ -89,7 +89,7 @@ class ResultActivity : AppCompatActivity() {
                 Toast.makeText(this, "갤러리에 저장되었습니다!", Toast.LENGTH_SHORT).show()
 
                 // 홈으로 이동 (기존 액티비티들을 모두 지우고 새로 시작)
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, GenMainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
                 finish() // 현재 화면 종료

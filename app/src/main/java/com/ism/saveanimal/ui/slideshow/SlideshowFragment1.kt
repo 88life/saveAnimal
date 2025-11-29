@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ism.saveanimal.AnimalAdapter
 import com.ism.saveanimal.AnimalItem
 import com.ism.saveanimal.GenMemberInformEdit
+import com.ism.saveanimal.MyApplicationActivity
+import com.ism.saveanimal.MyPickActivity
 import com.ism.saveanimal.R
 import com.ism.saveanimal.databinding.FragmentActivityProfileBinding
 import com.ism.saveanimal.databinding.FragmentSlideshowBinding
@@ -50,16 +52,15 @@ class SlideshowFragment1 : Fragment() {
             )
 
             // 2. 찜한 공고 RecyclerView
-            binding.rvFavorites.apply {
-                layoutManager =
-                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-                adapter = AnimalAdapter(dummyList1)
+            binding.tvSection5.setOnClickListener {
+                val intent = Intent(requireContext(), MyPickActivity::class.java)
+                startActivity(intent)
             }
 
             // 3. 신청한 입양/임보 RecyclerView
-            binding.rvApplications.apply {
-                layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-                adapter = AnimalAdapter(dummyList2)
+            binding.tvSection6.setOnClickListener {
+                val intent = Intent(requireContext(), MyApplicationActivity::class.java)
+                startActivity(intent)
             }
 
             // 4. 회원정보 수정 버튼 클릭 시 → GenMemberInformEdit Activity로 이동

@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ism.saveanimal.ResultActivity
-import com.ism.saveanimal.SaveMemberInformEditActivity
+import com.ism.saveanimal.ResultMainActivity
 import com.ism.saveanimal.databinding.GenHomeBinding
-import com.ism.saveanimal.databinding.SaveHomeBinding
 class HomeFragment1 : Fragment() {
 
     private var _binding: GenHomeBinding? = null
@@ -29,7 +27,7 @@ class HomeFragment1 : Fragment() {
         binding.nickname.text = "$name 입양자님"
 
         binding.testBtn.setOnClickListener {
-            val intent = Intent(requireContext(), ResultActivity::class.java)
+            val intent = Intent(requireContext(), ResultMainActivity::class.java)
             startActivity(intent)
         }
     }

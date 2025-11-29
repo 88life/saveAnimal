@@ -1,5 +1,6 @@
 package com.ism.saveanimal
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
@@ -60,7 +61,31 @@ class GenNoticeBoard : AppCompatActivity() {
 
     // 리사이클러뷰 설정
     private fun setupRecyclerView() {
-        adapter = AnimalAdapter1(emptyList())
+
+        adapter = AnimalAdapter1(
+            emptyList(),
+            onItemClick = { item ->
+
+                val intent = Intent(this, PostDetailCustomActivity::class.java)
+                intent.putExtra("postId", item.documentId)
+                intent.putExtra("name", item.aName)
+                intent.putExtra("age", item.aAge)
+                intent.putExtra("gender", item.aGender)
+                intent.putExtra("image", item.mainImageUrl)
+                intent.putExtra("breed", item.aBreed)
+                intent.putExtra("personality", item.aPersonality)
+                intent.putExtra("fears", item.aFears)
+                intent.putExtra("diseases", item.aDiseases)
+                intent.putExtra("shelter", item.aShelter)
+
+                startActivity(intent)
+            },
+            onButtonClick = { item ->
+                val intent = Intent(this, PostDetailCustomActivity::class.java)
+                intent.putExtra("postId", item.documentId)
+                startActivity(intent)
+            }
+        )
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
     }

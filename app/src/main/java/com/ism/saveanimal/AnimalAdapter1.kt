@@ -8,9 +8,38 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.ism.saveanimal.databinding.ItemAnimalBinding
 import kotlin.text.isNotEmpty
 
-class AnimalAdapter1(private var postList: List<Post>) : RecyclerView.Adapter<AnimalAdapter1.PostViewHolder>() {
+class AnimalAdapter1(
+    private var postList: List<Post>,
+    private val onItemClick: (Post) -> Unit,
+    private val onButtonClick: (Post) -> Unit
+) : RecyclerView.Adapter<AnimalAdapter1.PostViewHolder>() {
 
-    inner class PostViewHolder(val binding: ItemAnimalBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class PostViewHolder(val binding: ItemAnimalBinding) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(item: Post) = with(binding) {
+
+            tvName.text = item.aName
+            tvAge.text = "${item.aAge}살"
+            tvGender.text = item.aGender
+
+            // 클릭 이벤트
+            root.setOnClickListener {
+                onItemClick(item)
+            }
+
+            btnDetail.setOnClickListener {
+                onButtonClick(item)
+            }
+
+            // 이미지 로드
+            if (item.mainImageUrl.isNotEmpty()) {
+                Glide.with(root.context)
+                    .load(item.mainImageUrl)
+                    .transform(RoundedCorners(60))
+                    .into(ivAnimalProfile)
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val binding = ItemAnimalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -18,20 +47,7 @@ class AnimalAdapter1(private var postList: List<Post>) : RecyclerView.Adapter<An
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        val post = postList[position]
-        with(holder.binding) {
-            tvName.text = post.aName
-            tvAge.text = "${post.aAge}살"
-            tvGender.text = post.aGender
-
-            // 이미지 로드 (Glide)
-            if (post.mainImageUrl.isNotEmpty()) {
-                Glide.with(root.context)
-                    .load(post.mainImageUrl)
-                    .transform(RoundedCorners(60)) // 테두리에 맞춰 둥글게
-                    .into(ivAnimalProfile)
-            }
-        }
+        holder.bind(postList[position])
     }
 
     override fun getItemCount() = postList.size

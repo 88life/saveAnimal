@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val name = arguments?.getString("name")
-        binding.nickname.text = "$name 님 환영합니다!"
+        binding.nickname.text = "$name 보호소 담당자님,"
 
     }
 

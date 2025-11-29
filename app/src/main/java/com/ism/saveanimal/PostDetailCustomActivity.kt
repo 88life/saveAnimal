@@ -14,6 +14,29 @@ class PostDetailCustomActivity : AppCompatActivity() {
         binding = ActivityPostDetailCustomBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 전달받은 데이터
+        val postId = intent.getStringExtra("postId")
+        val name = intent.getStringExtra("name")
+        val age = intent.getIntExtra("age", 0)
+        val gender = intent.getStringExtra("gender")
+        val image = intent.getStringExtra("image")
+        val breed = intent.getStringExtra("breed")
+        val personality = intent.getStringExtra("personality")
+        val fears = intent.getStringExtra("fears")
+        val diseases = intent.getStringExtra("diseases")
+        val shelter = intent.getStringExtra("shelter")
+
+        // 화면에 출력
+        binding.etName.setText(name)
+        binding.etAge.setText("$age 살")
+        binding.etGender.setText(gender)
+        binding.etBreed.setText(breed)
+        binding.etPersonality.setText(personality)
+        binding.etFears.setText(fears)
+        binding.etDiseases.setText(diseases)
+        binding.etShelter.setText(shelter)
+        // Glide 등을 사용하여 이미지 표시 가능
+
         // 메뉴 버튼 클릭
         binding.btnMenu.setOnClickListener {
             Toast.makeText(this, "메뉴 열기", Toast.LENGTH_SHORT).show()

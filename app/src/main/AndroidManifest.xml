@@ -33,7 +33,11 @@
         <activity android:name=".GenNoticeBoard" />
         <activity android:name=".SaveAnnouncementWrite"/>
         <activity android:name=".GenMemberInformEdit"/>
+        <activity android:name=".ResultMainActivity"/>
         <activity android:name=".ResultActivity"/>
+        <activity android:name=".MyPickActivity"/>
+        <activity android:name=".MyApplicationActivity"/>
+        <activity android:name=".PostDetailCustomActivity"/>
         <activity android:name=".SheleterProfileActivity"
             android:theme="@style/Theme.SaveAnimal.NoActionBar"/>
 
