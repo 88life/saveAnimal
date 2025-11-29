@@ -8,43 +8,17 @@
     android:background="@color/white"
     tools:context=".SheleterProfileActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#E6F0FF"
-            android:textStyle="bold"
-            app:navigationIcon="@drawable/baseline_menu_24"
-            app:navigationIconTint="#003366"
-            app:title="@string/profile"
-            app:titleTextColor="#003366" />
-
-
-    </com.google.android.material.appbar.AppBarLayout>
-    <View
-        android:id="@+id/appBarDivider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/main_blue"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardProfileImage"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         app:cardBackgroundColor="#D0E6FF"
         app:cardCornerRadius="80dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
