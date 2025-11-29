@@ -68,10 +68,7 @@ class SlideshowFragment1 : Fragment() {
                 startActivity(intent)
             }
 
-            // 5. 메뉴 버튼 클릭 (상단 햄버거 아이콘)
-            binding.btnMenu.setOnClickListener {
-                requireActivity().onBackPressedDispatcher.onBackPressed()
-            }
+
         }
 
 

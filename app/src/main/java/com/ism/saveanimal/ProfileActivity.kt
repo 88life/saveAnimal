@@ -50,9 +50,5 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.btnMenu.setOnClickListener {
-            finish() // 메뉴 버튼 누르면 현재 화면 닫기 (예시)
-        }
-
     }
 }

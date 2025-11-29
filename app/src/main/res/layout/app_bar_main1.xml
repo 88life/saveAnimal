@@ -21,6 +21,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/fragment_gen_home" />
+    <include layout="@layout/gen_home" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -31,7 +31,7 @@ class gen_home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.gen_board, container, false)
+        val view = inflater.inflate(R.layout.gen_home, container, false)
 
         // 1. 추천공고 리사이클러 (가로)
         val recyclerRecommend = view.findViewById<RecyclerView>(R.id.recyclerView)

@@ -8,32 +8,26 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
+import com.ism.saveanimal.databinding.FragmentSheleterProfileBinding
 
 
 class SheleterProfileActivity : AppCompatActivity() {
 
+    private lateinit var binding: FragmentSheleterProfileBinding
+
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // 1. XML 레이아웃을 화면에 설정
-        setContentView(R.layout.fragment_sheleter_profile)
+        binding = FragmentSheleterProfileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // 2. XML의 View들을 ID로 찾기
-        val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
-        val btnEditProfile: Button = findViewById(R.id.btnEditProfile)
         val btnSettings: Button = findViewById(R.id.btnSettings)
         val btnLogout: Button = findViewById(R.id.btnLogout)
         val btnWithdraw: Button = findViewById(R.id.btnWithdraw)
 
-        // 3. 툴바 설정 (햄버거 메뉴 아이콘 클릭 리스너)
-        toolbar.setNavigationOnClickListener {
-
-            Toast.makeText(this, "메뉴 클릭됨", Toast.LENGTH_SHORT).show()
-        }
-
         // 4. 버튼 클릭 리스너 설정
-        btnEditProfile.setOnClickListener {
+        binding.btnEditProfile.setOnClickListener {
             Toast.makeText(this, "프로필 수정", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, SaveMemberInformEditActivity::class.java)
             startActivity(intent)

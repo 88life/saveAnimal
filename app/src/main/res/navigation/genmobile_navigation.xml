@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.ism.saveanimal.ui.home.HomeFragment"
+        android:name="com.ism.saveanimal.ui.home.HomeFragment1"
         android:label="홈"
-        tools:layout="@layout/fragment_gen_home" />
+        tools:layout="@layout/gen_home" />
 
     <fragment
         android:id="@+id/apply_check"
-        android:name="com.ism.saveanimal.ui.gallery.GalleryFragment"
+        android:name="com.ism.saveanimal.ui.gallery.GalleryFragment1"
         android:label="apply_check"
         tools:layout="@layout/gen_board" />
 

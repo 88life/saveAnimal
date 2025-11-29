@@ -11,58 +11,28 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:paddingTop="40dp">
 
-        <View
-            android:id="@+id/viewHeaderBg"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#FFF3CD"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/btnMenu"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:src="@drawable/ic_menu_slideshow"
-            android:layout_marginStart="16dp"
-            app:tint="#EFA65E"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/viewHeaderBg"
-            app:layout_constraintBottom_toBottomOf="@id/viewHeaderBg" />
-
-        <TextView
-            android:id="@+id/tvHeaderTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="프로필"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#EFA65E"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/viewHeaderBg"
-            app:layout_constraintBottom_toBottomOf="@id/viewHeaderBg" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvProfilePhoto"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="24dp"
-            app:cardCornerRadius="35dp"
             app:cardBackgroundColor="#E6CDB2"
+            app:cardCornerRadius="35dp"
             app:cardElevation="0dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/viewHeaderBg">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="프로필\n사진"
-                android:textColor="#5D4037"
+                android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_gravity="center"/>
+                android:text="프로필\n사진"
+                android:textColor="#5D4037" />
         </androidx.cardview.widget.CardView>
 
         <Button
@@ -109,6 +79,7 @@
             app:layout_constraintTop_toBottomOf="@id/cvProfilePhoto" />
 
         <Button
+            android:id="@+id/tvSection5"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:text="자세히 보기"
@@ -148,17 +119,19 @@
             app:layout_constraintTop_toBottomOf="@id/rvFavorites" />
 
         <Button
+            android:id="@+id/tvSection6"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="자세히 보기"
-            android:textSize="10dp"
-            android:textColor="#795548"
+            android:layout_marginEnd="24dp"
             android:background="#E6CDB2"
             android:padding="0dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="자세히 보기"
+            android:textColor="#795548"
+            android:textSize="10dp"
             app:layout_constraintBottom_toBottomOf="@id/tvSection2"
-            app:layout_constraintTop_toTopOf="@id/tvSection2" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSection2"
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvApplications"

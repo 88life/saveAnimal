@@ -15,17 +15,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/appBarDivider">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="?attr/actionBarSize"
-            android:background="#E6F0FF"
-            android:textStyle="bold"
-            app:navigationIcon="@drawable/baseline_menu_24"
-            app:navigationIconTint="#003366"
-            app:title="@string/profile"
-            app:titleTextColor="#003366" />
 
 
     </com.google.android.material.appbar.AppBarLayout>
