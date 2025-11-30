@@ -17,13 +17,37 @@ import com.google.android.material.snackbar.Snackbar
 import com.ism.saveanimal.databinding.SaveMenuFullBinding
 import android.widget.ImageButton
 import android.widget.Spinner
+import com.ism.saveanimal.databinding.ActivitySaveAnnouncementEditBinding
+import com.ism.saveanimal.databinding.FragmentSaveAnnouncementWriteBinding
 
 
 class SaveAnnouncementWrite: AppCompatActivity() {
+    private lateinit var binding: FragmentSaveAnnouncementWriteBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.fragment_save_announcement_write)
+
+        binding = FragmentSaveAnnouncementWriteBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val genderGroup = binding.genderGroup
+        val female = binding.radioButton3
+        val male = binding.radioButton2
+
+        var lastCheckedId = -1
+
+        binding.genderGroup.setOnCheckedChangeListener { group, checkedId ->
+            if (checkedId == -1) return@setOnCheckedChangeListener
+
+            if (checkedId == lastCheckedId) {
+                group.clearCheck()
+                lastCheckedId = -1
+            } else {
+                lastCheckedId = checkedId
+            }
+        }
+
+
+
 
         val spinner = findViewById<Spinner>(R.id.SpeciesSpinner)
         ArrayAdapter.createFromResource(
@@ -61,6 +85,8 @@ class SaveAnnouncementWrite: AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner3.adapter = adapter
         }
+
+
 
     }
 

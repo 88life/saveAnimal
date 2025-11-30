@@ -38,6 +38,27 @@ class SaveAnnouncementEdit: AppCompatActivity() {
             // Glide.with(this).load(it.image).into(binding.detailImage)
         }
 
+        val genderGroup = binding.genderGroup
+        val female = binding.radioButton3
+        val male = binding.radioButton2
+
+        var lastCheckedId = -1
+
+        binding.genderGroup.setOnCheckedChangeListener { group, checkedId ->
+            if (checkedId == -1) return@setOnCheckedChangeListener
+
+            if (checkedId == lastCheckedId) {
+                group.clearCheck()
+                lastCheckedId = -1
+            } else {
+                lastCheckedId = checkedId
+            }
+        }
+
+
+
+
+
         val spinner = findViewById<Spinner>(R.id.SpeciesSpinner)
         ArrayAdapter.createFromResource(
             this, R.array.species,

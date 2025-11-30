@@ -178,28 +178,26 @@
                     android:layout_marginTop="2dp">
 
                     <RadioGroup
+                        android:id="@+id/genderGroup"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/radioButton3"
-                            android:layout_width="match_parent"
+                            android:layout_width="60dp"
                             android:layout_height="35dp"
-                            android:layout_marginRight="10dp"
                             android:background="@drawable/input_box"
-                            android:padding="8dp"
-                            android:text="여"
-                            android:textSize="12dp" />
-                    </RadioGroup>
+                            android:text="여" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="35dp"
-                        android:background="@drawable/input_box"
-                        android:padding="8dp"
-                        android:text="남"
-                        android:textSize="12dp" />
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="70dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/input_box"
+                            android:layout_marginLeft="10dp"
+                            android:text="남" />
+                    </RadioGroup>
 
                 </LinearLayout>
 
