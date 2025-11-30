@@ -5,6 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ism.saveanimal.databinding.ItemAnimalCardBinding
 
+
+//찜한 공고 리싸이클러뷰 어댑터
 // 데이터 모델
 data class AnimalItem(
     val name: String,

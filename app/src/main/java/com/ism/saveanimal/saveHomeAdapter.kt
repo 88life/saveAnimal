@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ism.saveanimal.databinding.SaveRepeatRecyclerBinding
 
 class saveHomeAdapter(
-    private var items: List<save_DataItem>
+    private var items: List<SaveDataItem>,
+    private val onItemClick: (SaveDataItem) -> Unit
 ) : RecyclerView.Adapter<saveHomeAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: SaveRepeatRecyclerBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -15,12 +16,7 @@ class saveHomeAdapter(
         val itAge: TextView = itemView.findViewById(R.id.itAge)
         val itGender: TextView = itemView.findViewById(R.id.itGender)
 
-//        fun bind(item: save_DataItem) {
-//            binding.root.setOnLongClickListener {
-//                onItemLongClick(item)
-//                true
-//            }
-//        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -40,7 +36,7 @@ class saveHomeAdapter(
 
     override fun getItemCount(): Int = items.size
 
-    fun updateData(newList: List<save_DataItem>) {
+    fun updateData(newList: List<SaveDataItem>) {
         items = newList
         notifyDataSetChanged()
     }

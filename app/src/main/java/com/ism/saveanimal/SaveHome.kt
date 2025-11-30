@@ -6,23 +6,28 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ism.saveanimal.databinding.SaveRepeatRecyclerBinding
 
 class SaveHome(
-    private val items: List<save_DataItem>,
-    private val onItemLongClick: (save_DataItem) -> Unit
+    private val items: List<SaveDataItem>,
+    private val onItemLongClick: (SaveDataItem) -> Unit,
+    private val onItemClick: (SaveDataItem) -> Unit
 ) : RecyclerView.Adapter<SaveHome.ViewHolder>() {
 
     inner class ViewHolder(val binding: SaveRepeatRecyclerBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: save_DataItem) {
+        fun bind(item: SaveDataItem) {
 
-            // 롱클릭 이벤트
+            binding.root.setOnClickListener {
+                onItemClick(item)
+            }
+
             binding.root.setOnLongClickListener {
                 onItemLongClick(item)
                 true
             }
 
-            // TODO: 데이터 바인딩 (예시)
-            // binding.textViewTitle.text = item.title
+//            binding.textTitle.text = item.title
+//            binding.textContent.text = item.content
+            // 이미지 넣으려면 Glide 사용 가능
         }
     }
 

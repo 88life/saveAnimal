@@ -50,12 +50,12 @@ class FragmentHome : Fragment() {
 
         // 3. 어댑터 설정 (테스트용 더미 데이터)
         val dummyPosts = listOf(
-            save_DataItem("강아지 보호 공고", "2025-01-11", "3개월 추정, 믹스, 여아"),
-            save_DataItem("고양이 보호 공고", "2025-01-10", "2살 추정, 코숏, 중성화 완료"),
-            save_DataItem("유기견 구조 완료", "2025-01-09", "치와와, 건강양호")
+            SaveDataItem("강아지 보호 공고", "2025-01-11", "3개월 추정, 믹스, 여아"),
+            SaveDataItem("고양이 보호 공고", "2025-01-10", "2살 추정, 코숏, 중성화 완료"),
+            SaveDataItem("유기견 구조 완료", "2025-01-09", "치와와, 건강양호")
         )
 
-        recyclerView.adapter = saveHomeAdapter(dummyPosts)
+//        recyclerView.adapter = SaveHome(dummyPosts)
     }
     companion object {
         /**

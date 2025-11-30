@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ism.saveanimal.databinding.SaveApplyCheckRecyclerPBinding
 
 class saveConfirmCheckPAdapter(
-    private var items: List<save_DataItem>
+    private var items: List<SaveDataItem>
 ) : RecyclerView.Adapter<saveConfirmCheckPAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: SaveApplyCheckRecyclerPBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -30,7 +30,7 @@ class saveConfirmCheckPAdapter(
 
     override fun getItemCount(): Int = items.size
 
-    fun updateData(newList: List<save_DataItem>) {
+    fun updateData(newList: List<SaveDataItem>) {
         items = newList
         notifyDataSetChanged()
     }

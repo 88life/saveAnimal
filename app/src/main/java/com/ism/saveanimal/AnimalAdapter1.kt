@@ -38,6 +38,10 @@ class AnimalAdapter1(
                     .transform(RoundedCorners(60))
                     .into(ivAnimalProfile)
             }
+
+            binding.root.setOnClickListener {
+                onItemClick(item)
+            }
         }
     }
 

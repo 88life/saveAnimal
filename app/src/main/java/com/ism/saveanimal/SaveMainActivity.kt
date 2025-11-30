@@ -24,7 +24,6 @@ class SaveMainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: SaveMenuFullBinding
-    private lateinit var binding1: SaveHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

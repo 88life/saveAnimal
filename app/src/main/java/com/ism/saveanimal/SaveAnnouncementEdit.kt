@@ -17,13 +17,26 @@ import com.google.android.material.snackbar.Snackbar
 import com.ism.saveanimal.databinding.SaveMenuFullBinding
 import android.widget.ImageButton
 import android.widget.Spinner
+import com.ism.saveanimal.databinding.ActivitySaveAnnouncementEditBinding
 
 
-class SaveAnnouncementWrite: AppCompatActivity() {
+class SaveAnnouncementEdit: AppCompatActivity() {
+    private lateinit var binding: ActivitySaveAnnouncementEditBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.fragment_save_announcement_write)
+        binding = ActivitySaveAnnouncementEditBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // 전달된 데이터 받기
+        val item = intent.getParcelableExtra<SaveDataItem>("item")
+
+        item?.let {
+//            binding.detailTitle.text = it.title
+//            binding.detailContent.text = it.content
+
+            // 이미지 로드 가능
+            // Glide.with(this).load(it.image).into(binding.detailImage)
+        }
 
         val spinner = findViewById<Spinner>(R.id.SpeciesSpinner)
         ArrayAdapter.createFromResource(

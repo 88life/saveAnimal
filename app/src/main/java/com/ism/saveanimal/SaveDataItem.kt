@@ -1,6 +1,10 @@
 package com.ism.saveanimal
 
-data class save_DataItem(
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class SaveDataItem(
     //보호소
     //홈
     val aniImage: String = "",
@@ -29,4 +33,4 @@ data class save_DataItem(
     val shelter: String = "",
     val shelterPhone: String = ""
 
-    )
+    ) : Parcelable

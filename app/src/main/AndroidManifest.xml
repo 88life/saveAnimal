@@ -32,6 +32,7 @@
         <activity android:name=".SaveMemberInformEditActivity" />
         <activity android:name=".GenNoticeBoard" />
         <activity android:name=".SaveAnnouncementWrite"/>
+        <activity android:name=".SaveAnnouncementEdit"/>
         <activity android:name=".GenMemberInformEdit"/>
         <activity android:name=".ResultMainActivity"/>
         <activity android:name=".ResultActivity"/>
