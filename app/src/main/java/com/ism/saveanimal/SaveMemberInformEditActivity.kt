@@ -1,5 +1,6 @@
 package com.ism.saveanimal
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.ArrayAdapter
@@ -16,6 +17,10 @@ class SaveMemberInformEditActivity : AppCompatActivity() {
         binding = SaveMemberInformEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.button10.setOnClickListener {
+            val intent = Intent(this, SaveMainActivity::class.java)
+            startActivity(intent)
+        }
 
         val spinner = findViewById<Spinner>(R.id.spinnerRegion)
         ArrayAdapter.createFromResource(
@@ -26,6 +31,7 @@ class SaveMemberInformEditActivity : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner.adapter = adapter
         }
+
 //        }
     }
 

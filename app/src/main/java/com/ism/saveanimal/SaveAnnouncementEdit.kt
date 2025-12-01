@@ -55,7 +55,10 @@ class SaveAnnouncementEdit: AppCompatActivity() {
             }
         }
 
-
+        binding.button11.setOnClickListener {
+            val intent = Intent(this, SaveMainActivity::class.java)
+            startActivity(intent)
+        }
 
 
 

@@ -1,5 +1,6 @@
 package com.ism.saveanimal
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -60,6 +61,8 @@ class PostDetailCustomActivity : AppCompatActivity() {
 
             Toast.makeText(this, "[$name] 입양 신청을 진행합니다.", Toast.LENGTH_SHORT).show()
             // 입양 신청 화면으로 이동하는 Intent 코드 추가 가능
+            val intent = Intent(this, GenMainActivity::class.java)
+            startActivity(intent)
         }
 
         // 2. 임보 신청하기 버튼
@@ -73,6 +76,8 @@ class PostDetailCustomActivity : AppCompatActivity() {
 
             Toast.makeText(this, "[$name] 임시보호 신청을 진행합니다.", Toast.LENGTH_SHORT).show()
             // 임보 신청 화면으로 이동하는 Intent 코드 추가 가능
+            val intent = Intent(this, GenMainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

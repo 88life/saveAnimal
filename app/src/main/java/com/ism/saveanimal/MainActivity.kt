@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity() {
 
             when(selectedButtonId) {
                 R.id.button_animalShelter -> {
-                    val intent = Intent(this, SaveMainActivity::class.java)
+                    val intent = Intent(this, ShelterSignUpActivity::class.java)
                     startActivity(intent)
                 }
 
                 R.id.button_users -> {
-                    val intent = Intent(this, GenMainActivity::class.java)
+                    val intent = Intent(this, SignUpGeneralActivity::class.java)
                     startActivity(intent)
                 }
             }

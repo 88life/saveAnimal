@@ -19,6 +19,11 @@ class GenMemberInformEdit : AppCompatActivity() {
         binding = GenMemberInformEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.button10.setOnClickListener {
+            val intent = Intent(this, GenMainActivity::class.java)
+            startActivity(intent)
+        }
+
         val spinner = findViewById<Spinner>(R.id.spinnerRegion)
         ArrayAdapter.createFromResource(
             this, R.array.region_list,

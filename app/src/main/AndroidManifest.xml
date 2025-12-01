@@ -16,7 +16,7 @@
 <!--            android:exported="false" />-->
 
         <activity
-            android:name=".MainActivity"
+            android:name=".StartActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SaveAnimal.NoActionBar">
@@ -39,6 +39,10 @@
         <activity android:name=".MyPickActivity"/>
         <activity android:name=".MyApplicationActivity"/>
         <activity android:name=".PostDetailCustomActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ShelterSignUpActivity"/>
+        <activity android:name=".SignUpGeneralActivity"/>
+        <activity android:name=".LoginActivity"/>
         <activity android:name=".SheleterProfileActivity"
             android:theme="@style/Theme.SaveAnimal.NoActionBar"/>
 
